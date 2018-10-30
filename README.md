@@ -1,47 +1,48 @@
 # MnasNet-pytorch-pretrained
 
-A pytorch pretrained model for MnasNet, paper: [MnasNet: Platform-Aware Neural Architecture Search for Mobile](https://arxiv.org/abs/1807.11626)
+A pytorch pretrained model of MnasNet, paper: [MnasNet: Platform-Aware Neural Architecture Search for Mobile](https://arxiv.org/abs/1807.11626)
 
 ref: https://github.com/AnjieZheng/MnasNet-PyTorch
 
 ## Introduction
 
-The original paper said on the ImageNet classification task, standard MnasNet Architecture achieves 74.0% top-1 accuracy with 76ms latency on a Pixel phone.
+The original paper says that on the ImageNet classification task, standard MnasNet Architecture achieves 74.0% top-1 accuracy with 76ms latency on a Pixel phone.
 
-I tried many different settings and pretrained it on standard ilsvrc12 Imagenet 1k trainging dataset(1281167 training images) and validation set(50000 validation images) with single-crop method, it achives:
-
+While I have tried many different training settings and pretrained it on standard ilsvrc12 Imagenet 1k training dataset(1281167 training images) and tested the models on standard ilsvrc12 Imagenet 1k validation set(50000 validation images) with single-crop method, it achives:
 
 | Top1 Accuracy | Top5 Accuracy |
 | :------| :------ |
 | 68.300 | 88.364 |
 
-You could refer log for more details. Continuing training maybe get better results
+You could refer my logs for more details. Continuing my training process may achieve better results.
 
-To the best of my knowledge, it is the highest Top1 Accuracy which only trained on standard ilsvrc12 Imagenet 1k dataset and test on validation set(50000 validation images).
+To the best of my knowledge, it is the highest Top1 Accuracy which only trained on standard ilsvrc12 Imagenet 1k training set(1281167 training images) and test on validation set(50000 validation images).
 
 ## Training Strategies
 
-Starting from defualt lr which is 0.1, and decayed to its 0.5 every 20 epochs.
+Starting from lr 0.1, and decayed to its 0.5 every 20 epochs.
 
 256 batchsize with 2 K80 GPU.
 
-I tried with rmsprop but it seems cannot achieve good result in my case, so I kept using SGD as my optimizer.
+I tried with rmsprop as the paper says but it did not work well in my case, so I kept using SGD as my optimizer.
 
-More details about crops and data augmentation methods could refer the codes.
+From the logs, we can see the model is underfitting, so I got rid of Dropout.
+
+More details about crops and data augmentation methods could refer my codes.
 
 ## Quick start
 
 1. Download data from Imagenet website.
 
-2. Untar all the zip files and use valprep.sh script to create validation set. If you want to know more about this dataset, plz refer this page: https://www.zhihu.com/question/273633408/answer/369134332
+2. Untar all zip files and use valprep.sh script to create validation set. If you would like to know more about this dataset, plz refer to this page: https://www.zhihu.com/question/273633408/answer/369134332
 
-3. Simply run run_mnasnet.sh, you could continue training by loading the pretrained model.
+3. Simply run run_mnasnet.sh, you could continue my training by loading the pretrained model.
 
-4. Use draw_log.py to parse log and draw plots after training done!
+4. Use draw_log.py to parse the training log and draw plots after training done!
 
 ## Reference
 
-If you feel it is useful and writing papers or any other materials by using this repo, please refer it as
+If you feel it is useful about writing papers or any other materials by using this repo, please refer it as
 
 ```
 @article{huwang2018mnasnet,
@@ -55,13 +56,13 @@ Thank you!
 
 ## To-Do List
 
-Some to-do list, you guys are welcome to have a try and see if it could have better accuracies!
+Some to-do list, you are welcome to have a try and see if it could have better accuracies and PR!
 
-1. shake-shake trick
+1. Shake-shake trick
 
-2. cutout trick
+2. Cutout trick
 
-3. pretrained on imagenet 22k or tencent-ml-images(https://github.com/Tencent/tencent-ml-images)
+3. Pretraine the model on imagenet 22k or tencent-ml-images(https://github.com/Tencent/tencent-ml-images), then fine-tune on ImageNet
 
 ## Architecture
 
