@@ -16,7 +16,7 @@ While I have tried many different training settings and pretrained it on standar
 
 You could refer to my logs for more details. Continuing my training process may achieve better results.
 
-To the best of my knowledge, it is the highest Top1 Accuracy open-source model which only trained on standard ilsvrc12 Imagenet 1k training set(1281167 images) and test on validation set(50000 mages).
+To the best of my knowledge, it is the highest Top1 Accuracy open-source model which only trained on standard ilsvrc12 Imagenet 1k training set(1281167 images) and test on validation set(50000 images).
 
 ## Training Strategies
 
