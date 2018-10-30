@@ -8,15 +8,15 @@ ref: https://github.com/AnjieZheng/MnasNet-PyTorch
 
 The original paper says that on the ImageNet classification task, standard MnasNet Architecture achieves 74.0% top-1 accuracy with 76ms latency on a Pixel phone.
 
-While I have tried many different training settings and pretrained it on standard ilsvrc12 Imagenet 1k training dataset(1281167 training images) and tested the models on standard ilsvrc12 Imagenet 1k validation set(50000 validation images) with single-crop method, it achives:
+While I have tried many different training settings and pretrained it on standard ilsvrc12 Imagenet 1k training dataset(1281167 images) and tested the models on standard ilsvrc12 Imagenet 1k validation set(50000 images) with single-crop method, it achives:
 
 | Top1 Accuracy | Top5 Accuracy |
 | :------| :------ |
 | 68.300 | 88.364 |
 
-You could refer my logs for more details. Continuing my training process may achieve better results.
+You could refer to my logs for more details. Continuing my training process may achieve better results.
 
-To the best of my knowledge, it is the highest Top1 Accuracy which only trained on standard ilsvrc12 Imagenet 1k training set(1281167 training images) and test on validation set(50000 validation images).
+To the best of my knowledge, it is the highest Top1 Accuracy open-source model which only trained on standard ilsvrc12 Imagenet 1k training set(1281167 images) and test on validation set(50000 mages).
 
 ## Training Strategies
 
@@ -27,6 +27,8 @@ Starting from lr 0.1, and decayed to its 0.5 every 20 epochs.
 I tried with rmsprop as the paper says but it did not work well in my case, so I kept using SGD as my optimizer.
 
 From the logs, we can see the model is underfitting, so I got rid of Dropout.
+
+Image input size is crop to 224 (I have tried size 299, but seems not working well).
 
 More details about crops and data augmentation methods could refer my codes.
 
@@ -46,7 +48,7 @@ If you feel it is useful about writing papers or any other materials by using th
 
 ```
 @article{huwang2018mnasnet,
-  title={mnasnet_pretrained},
+  title={mnasnet_pretrained https://github.com/billhhh/MnasNet-pytorch-pretrained},
   author={Hu Wang},
   year={2018}
 }
@@ -62,7 +64,7 @@ Some to-do list, you are welcome to have a try and see if it could have better a
 
 2. Cutout trick
 
-3. Pretraine the model on imagenet 22k or tencent-ml-images(https://github.com/Tencent/tencent-ml-images), then fine-tune on ImageNet
+3. Pretraine the model on imagenet 22k or tencent-ml-images(https://github.com/Tencent/tencent-ml-images), then fine-tune on ImageNet 1k
 
 ## Architecture
 
