@@ -12,7 +12,7 @@ While I have tried many different training settings and pretrained it on standar
 
 | Top1 Accuracy | Top5 Accuracy |
 | :------| :------ |
-| 68.688 | 88.666 |
+| 68.892 | 88.720 |
 
 You could refer to my logs for more details. Continuing my training process may achieve better results.
 
