@@ -4,11 +4,23 @@ A pytorch pretrained model of MnasNet, paper: [MnasNet: Platform-Aware Neural Ar
 
 ref: https://github.com/AnjieZheng/MnasNet-PyTorch
 
+## News
+
+---------------------------09.Nov.2018 update---------------------------
+
+I have tried with input size 299 and the accuracy is:
+
+| Top1 Accuracy | Top5 Accuracy |
+| :------| :------ |
+| 69.880 | 89.438 |
+
+Top1 Accuracy is quite close to 70%
+
 ## Introduction
 
 The original paper says that on the ImageNet classification task, standard MnasNet Architecture achieves 74.0% top-1 accuracy with 76ms latency on a Pixel phone.
 
-While I have tried many different training settings and pretrained it on standard ilsvrc12 Imagenet 1k training dataset(1281167 images) and tested the models on standard ilsvrc12 Imagenet 1k validation set(50000 images) with single-crop method, it achives:
+While I have tried many different training settings and pretrained it on standard ilsvrc12 Imagenet 1k training dataset(1281167 images) and tested the models on standard ilsvrc12 Imagenet 1k validation set(50000 images) with single-crop method, it achives (input_size = 224):
 
 | Top1 Accuracy | Top5 Accuracy |
 | :------| :------ |
@@ -28,7 +40,7 @@ I tried with rmsprop as the paper says but it did not work well in my case, so I
 
 From the logs, we can see the model is underfitting, so I got rid of Dropout.
 
-Image input size is crop to 224 (I have tried size 299, but seems not working well).
+Image input size is crop to 224.
 
 More details about crops and data augmentation methods could refer my codes.
 
