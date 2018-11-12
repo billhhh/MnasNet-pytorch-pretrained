@@ -1,4 +1,4 @@
-# MnasNet-pytorch-pretrained (in progress)
+# MnasNet-pytorch-pretrained (Work in progress)
 
 A pytorch pretrained model of MnasNet, paper: [MnasNet: Platform-Aware Neural Architecture Search for Mobile](https://arxiv.org/abs/1807.11626)
 
@@ -83,7 +83,7 @@ Some to-do list, you are welcome to have a try and see if it could have better a
 
 1. Shake-shake trick
 
-2. Cutout trick
+2. Cutout trick (under trying)
 
 3. Pretraine the model on imagenet 22k or tencent-ml-images(https://github.com/Tencent/tencent-ml-images), then fine-tune on ImageNet 1k
 
