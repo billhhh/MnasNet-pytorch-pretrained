@@ -6,6 +6,15 @@ ref: https://github.com/AnjieZheng/MnasNet-PyTorch
 
 ## News
 
+---------------------------12.Nov.2018 update---------------------------
+
+Input size 299 trail has reached 70% top1 accuracy
+
+| Top1 Accuracy | Top5 Accuracy |
+| :------| :------ |
+| 70.010 | 89.412 |
+
+
 ---------------------------09.Nov.2018 update---------------------------
 
 I have tried with input size 299 and the accuracy is:
