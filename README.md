@@ -6,6 +6,15 @@ ref: https://github.com/AnjieZheng/MnasNet-PyTorch
 
 ## News
 
+---------------------------14.Nov.2018 update---------------------------
+
+Input size 299 trail has reached 70% top1 accuracy
+
+| Top1 Accuracy | Top5 Accuracy |
+| :------| :------ |
+| 70.1 | 89.480 |
+
+
 ---------------------------12.Nov.2018 update---------------------------
 
 Input size 299 trail has reached 70% top1 accuracy
@@ -86,6 +95,8 @@ Some to-do list, you are welcome to have a try and see if it could have better a
 2. Cutout trick (under trying)
 
 3. Pretraine the model on imagenet 22k or tencent-ml-images(https://github.com/Tencent/tencent-ml-images), then fine-tune on ImageNet 1k
+
+4. ~~320 input (not much improvement)~~
 
 ## Architecture
 
