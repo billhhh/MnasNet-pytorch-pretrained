@@ -8,7 +8,18 @@ ref: https://github.com/AnjieZheng/MnasNet-PyTorch
 
 ---------------------------19.Nov.2018 update---------------------------
 
-Improving Accuracy continuously.
+Updating Accuracy.
+
+| Top1 Accuracy | Top5 Accuracy |
+| :------| :------ |
+| 70.132 | 89.434 |
+
+Tried cutout, not much help
+
+
+---------------------------19.Nov.2018 update---------------------------
+
+Improving Accuracy.
 
 | Top1 Accuracy | Top5 Accuracy |
 | :------| :------ |
@@ -94,7 +105,7 @@ Some to-do list, you are welcome to have a try and see if it could have better a
 
 1. Shake-shake trick
 
-2. Cutout trick (under trying)
+2. ~~Cutout trick (did not improve the accuracy)~~
 
 3. Pretraine the model on imagenet 22k or tencent-ml-images(https://github.com/Tencent/tencent-ml-images), then fine-tune on ImageNet 1k
 
