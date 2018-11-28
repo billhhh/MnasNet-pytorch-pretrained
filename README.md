@@ -85,15 +85,17 @@ More details about crops and data augmentation methods could refer my codes.
 
 4. Use draw_log.py to parse the training log and draw plots after training done!
 
-## Reference
+## Use and citation
 
-If you feel it is useful about writing papers or any other materials by using this repo, please refer it as
+My goal in releasing this code is to increase transparency and replicability of deep learning new models MnasNet. I encourage you to use this code to start your own projects. If you do, please cite the repo:
 
 ```
-@article{huwang2018mnasnet,
-  title={mnasnet_pretrained https://github.com/billhhh/MnasNet-pytorch-pretrained},
-  author={Hu Wang},
-  year={2018}
+author = {Hu Wang},
+  title = {reproduce-mnasnet},
+  year = {2018},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/billhhh/MnasNet-pytorch-pretrained}}
 }
 ```
 
