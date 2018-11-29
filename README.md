@@ -1,4 +1,4 @@
-# MnasNet-pytorch-pretrained (Work in progress)
+# MnasNet-pytorch-pretrained
 
 A pytorch pretrained model of MnasNet, paper: [MnasNet: Platform-Aware Neural Architecture Search for Mobile](https://arxiv.org/abs/1807.11626)
 
@@ -6,7 +6,7 @@ ref: https://github.com/AnjieZheng/MnasNet-PyTorch
 
 ## News
 
----------------------------19.Nov.2018 update---------------------------
+---------------------------25.Nov.2018 update---------------------------
 
 Updating Accuracy.
 
