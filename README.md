@@ -67,7 +67,7 @@ Starting from lr 0.1, and decayed to its 0.5 every 20 epochs.
 
 256 batchsize with 2 K80 GPU.
 
-I tried with rmsprop as the paper says but it did not work well in my case, so I kept using SGD as my optimizer.
+I tried with rmsprop as the paper says and Adam optimizer but they did not work well in this task, so I kept using SGD as my optimizer.
 
 From the logs, we can see the model is underfitting, so I got rid of Dropout.
 
