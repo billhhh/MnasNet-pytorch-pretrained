@@ -1,4 +1,4 @@
-# MnasNet-pytorch-pretrained
+# MnasNet-pytorch-pretrained 
 
 A pytorch pretrained model of MnasNet, paper: [MnasNet: Platform-Aware Neural Architecture Search for Mobile](https://arxiv.org/abs/1807.11626)
 
